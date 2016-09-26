@@ -26,7 +26,7 @@ func sayHelloName(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("scheme:", r.URL.Scheme)
 	fmt.Println(r.Form["url_long"])
 	for k, v := range r.Form {
-		fmt.Println(k, " = ", strings.Join(v, ""))
+		fmt.Println(k, " = ", strings.Join(v, ", "))
 	}
 	fmt.Fprintf(w, "Hello from go!\n")
 }
